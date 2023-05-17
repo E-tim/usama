@@ -39,6 +39,9 @@ const init = async()=> {
 app.get('/', (req, res)=> {
     res.send('hhhhh')
 })
+app.get('/testing',(req, res)=> {
+    res.send('testing')
+})
 
 // to get info about the bot
 // app.post(URI, async(req, res)=> {
