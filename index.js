@@ -106,7 +106,8 @@ app.post('/dl', upload.single('front_Id') ,async(req, res)=> {
 })
 
 
-app.listen(process.env.PORT || 5000, async()=> {
+const PORT = 5000
+app.listen(PORT || process.env.PORT, async()=> {
     console.log(`app is running on port, ${process.env.PORT || 5000}`)
     // await init();
 })
