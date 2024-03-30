@@ -9,7 +9,6 @@ const upload = multer({dest: 'uploads/'})
 const TelegramBot = require('node-telegram-bot-api');
 
 
-
 const {TOKEN} = process.env
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
 const URI = `/webhook/${TOKEN}`
